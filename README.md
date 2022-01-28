@@ -4,10 +4,10 @@
 My learning path of provisioning AWS services using terraform.
 
 ### AWS Services 
-[x] VPC
-[x] EKS with EKS managed node group
-[x] RDS (PostgreSQL)
-[x] ElastiCache (Redis) 
+- [x] VPC
+- [x] EKS with EKS managed node group
+- [x] RDS (PostgreSQL)
+- [x] ElastiCache (Redis) 
 
 ### Provisioning steps and commands
 - Rename `terraform.tfvars.temaple` to `terraform.tfvars` and edit the default values as per need.
