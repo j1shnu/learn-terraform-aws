@@ -1,0 +1,38 @@
+// AWS
+aws_region = "us-east-1"
+
+// VPC variables
+vpc_name                   = "demo-vpc"
+vpc_cidr_block             = "192.168.0.0/16"
+public_subnet_cidr_blocks  = ["192.168.0.0/18", "192.168.64.0/18"]
+
+// EKS Cluster
+cluster_name = "demo-eks-cluster"
+cluster_version = "1.21"
+
+// Node Group
+instance_type     = ["t2.micro"]
+node_grp_name     = "demo.eks-node-grp"
+node_min_size     = 2
+node_max_size     = 3
+node_desired_size = 2
+
+// RDS 
+rds_name          = "demo-db"
+pg_version        = "11.12"
+db_instance_class = "db.t2.micro"
+db_storage        = 20
+db_max_storage    = 21
+db_name = ""
+db_username = ""
+db_password = ""
+db_port = ""
+
+
+// ElastiCache
+elasticache_cluster_name        = "demo-redis"
+elasticache_cluster_description = "some description"
+elasticache_node                = "cache.t2.micro"
+engine_version                  = "5.0.6"
+parameter_group_name            = "default.redis5.0.cluster.on"
+replicas_per_node_group         = 1
