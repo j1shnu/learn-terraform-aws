@@ -29,7 +29,6 @@ db_username = ""
 db_password = ""
 db_port = ""
 
-
 // ElastiCache
 elasticache_cluster_name        = "demo-redis"
 elasticache_cluster_description = "some description"
@@ -37,3 +36,13 @@ elasticache_node                = "cache.t2.micro"
 engine_version                  = "5.0.6"
 parameter_group_name            = "default.redis5.0.cluster.on"
 replicas_per_node_group         = 1
+
+// MSK
+kms_alias           = "alias/msk-key"
+kms_desc            = "Key for MSK Cluster"
+msk_log_grp_name    = "demo-msk-logs"
+msk_cluster_name    = "demo-msk"
+kafka_version       = "2.2.1"
+num_of_broker_nodes = 2
+msk_instance_type   = "kafka.t3.small"
+msk_ebs_volume_size = 1
