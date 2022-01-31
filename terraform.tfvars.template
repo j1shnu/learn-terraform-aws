@@ -11,6 +11,7 @@ cluster_name = "demo-eks-cluster"
 cluster_version = "1.21"
 
 // Node Group
+ssh_key_name      = ""
 instance_type     = ["t2.micro"]
 node_grp_name     = "demo.eks-node-grp"
 node_min_size     = 2
