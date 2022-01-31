@@ -9,7 +9,7 @@ variable "db_password" {}
 variable "db_port" {}
 
 resource "aws_security_group_rule" "rds-rule" {
-  security_group_id        = module.eks-vpc.default_security_group_id
+  security_group_id        = module.vpc.default_security_group_id
   protocol                 = "-1"
   type                     = "ingress"
   from_port                = 0
@@ -37,8 +37,8 @@ module "rds" {
   password = var.db_password
   port     = var.db_port
 
-  vpc_security_group_ids = [module.eks-vpc.default_security_group_id]
-  subnet_ids             = module.eks-vpc.public_subnets
+  vpc_security_group_ids = [module.vpc.default_security_group_id]
+  subnet_ids             = module.vpc.public_subnets
   publicly_accessible    = true
 
   family               = format("postgres%s", split(".", var.pg_version)[0])

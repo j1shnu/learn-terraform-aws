@@ -7,7 +7,7 @@ data "aws_availability_zones" "available" {
   state = "available"
 }
 
-module "eks-vpc" {
+module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "3.11.3"
 

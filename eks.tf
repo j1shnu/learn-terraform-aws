@@ -6,8 +6,8 @@ module "eks" {
 
   cluster_name    = var.cluster_name
   cluster_version = var.cluster_version
-  subnet_ids      = module.eks-vpc.public_subnets
-  vpc_id          = module.eks-vpc.vpc_id
+  subnet_ids      = module.vpc.public_subnets
+  vpc_id          = module.vpc.vpc_id
 
 
 }
