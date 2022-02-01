@@ -9,6 +9,7 @@ My learning path of provisioning AWS services using terraform.
 - [x] RDS (PostgreSQL)
 - [x] ElastiCache (Redis)
 - [x] MSK 
+- [x] ElasticSearch
 
 ### Provisioning steps and commands
 - Rename `terraform.tfvars.template` to `terraform.tfvars` and edit the default values as per need.
